@@ -1,0 +1,47 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "babel-node src/server.js",
+    "test": "echo No tests defined",
+    "test-integration": "take-home-integration-test features --command 'npm start' --port 8000 -- --tags 'not @skip'"
+  },
+  "engines": {
+    "node": ">=6.5"
+  },
+  "engineStrict": true,
+  "babel": {
+    "presets": [
+      "stage-3",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6.5"
+          },
+          "exclude": [
+            "transform-regenerator"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@c1-code-test/take-home-tester": "./assets/c1-code-test-take-home-tester-0.7.1.tgz",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-stage-3": "^6.24.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.3",
+    "joi": "^13.3.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
+    "nedb": "^1.8.0",
+    "require-all": "^2.2.0",
+    "winston": "^2.4.2"
+  }
+}
